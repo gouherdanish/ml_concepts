@@ -13,9 +13,20 @@ class LinearRegression:
         self.b1 = 0
     
     def predict(self,X):
+        """
+        Implements Hypothesis Function for Linear Model
+        h = b0 + b1*X
+        """
         return self.b0 + self.b1 * X
     
     def fit(self,X,y):
+        """
+        Implements training the model on the supplied data
+        - Find y_pred using model
+        - Find residual/error in prediction
+        - Compute gradient wrt model params
+        - Update model params in the direction of decreasing gradient
+        """
         # number of examples
         n = len(X)
         # Iterate finite number of times
