@@ -8,6 +8,8 @@ class LinearRegression:
     Assumption:
     - has one feature (univariate)
     - has constant learning rate
+    - no regularization
+    - uses full Batch Gradient descent
     """
     def __init__(self,learning_rate=0.1,iterations=100) -> None:
         self.learning_rate = learning_rate
