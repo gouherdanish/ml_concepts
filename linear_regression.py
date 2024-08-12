@@ -4,6 +4,10 @@ class LinearRegression:
     """
     Simulates Linear Regression model
     using Gradient Descent optimization
+
+    Assumption:
+    - has one feature (univariate)
+    - has constant learning rate
     """
     def __init__(self,learning_rate=0.1,iterations=100) -> None:
         self.learning_rate = learning_rate
