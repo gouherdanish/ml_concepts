@@ -1,6 +1,15 @@
 import numpy as np
 
 class LogisticRegression:
+    """
+    Features
+        - Binary Classifier
+            - 0: negative class
+            - 1: positive class
+        - Assumes one predictor variable 
+        - Assumes the classification threshold as 0.5 
+        - Uses cross entropy loss function 
+    """
     def __init__(self,learning_rate=0.01,iterations=100) -> None:
         self.learning_rate = learning_rate
         self.iterations = iterations
