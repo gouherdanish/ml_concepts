@@ -159,9 +159,11 @@ if __name__=='__main__':
     y = df['watched'].to_numpy()
 
     # Model Training
-    model = LogisticRegression(iterations=100,learning_rate=0.2)
+    model = LogisticRegression(iterations=1,learning_rate=0.01)
     model.fit(X,y)
     print(model.parameters())
+    print(model.history())
+    print(model.gradients())
 
     # Validating
     y_val_prob = model.predict_proba(X)
