@@ -107,8 +107,8 @@ class LogisticRegression:
             self._bias += (-1 * self.learning_rate * dLdb)
             self._weights += (-1 * self.learning_rate * dLdw)
 
-            if i == 0 or (i + 1) % 10 == 0:
-                print(f"EPOCH [{i+1}/{self.iterations}]: training loss = {loss}")
+            # if i == 0 or (i + 1) % 10 == 0:
+            #     print(f"EPOCH [{i+1}/{self.iterations}]: training loss = {loss}")
 
     def history(self):
         return self._loss_history
@@ -159,11 +159,11 @@ if __name__=='__main__':
     y = df['watched'].to_numpy()
 
     # Model Training
-    model = LogisticRegression(iterations=1,learning_rate=0.01)
+    model = LogisticRegression(iterations=100,learning_rate=0.01)
     model.fit(X,y)
     print(model.parameters())
-    print(model.history())
-    print(model.gradients())
+    # print(model.history())
+    # print(model.gradients())
 
     # Validating
     y_val_prob = model.predict_proba(X)
